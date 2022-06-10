@@ -30,7 +30,13 @@ public struct AdvancedScrollViewProxy {
 
     /// Content size is read-only on macOS so it is here
     public var contentSize: CGSize {
-        getContentSize()
+        get {
+            getContentSize()
+        }
+        
+        set {
+            setContentSize(newValue)
+        }
     }
 
     public var contentInset: EdgeInsets {
@@ -77,7 +83,7 @@ public struct AdvancedScrollViewProxy {
     var setContentOffset: ((_ contentOffset: CGPoint) -> Void)!
 
     var getContentSize: (() -> CGSize)!
-
+    var setContentSize: ((_ contentSize: CGSize) -> Void)!
     var getContentInset: (() -> EdgeInsets)!
     var setContentInset: ((_ contentInset: EdgeInsets) -> Void)!
 

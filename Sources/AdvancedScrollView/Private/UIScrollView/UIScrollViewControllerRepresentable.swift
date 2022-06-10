@@ -89,6 +89,10 @@ struct UIScrollViewControllerRepresentable<Content: View>: UIViewControllerRepre
             scrollViewController.scrollView.contentSize
         }
 
+        proxy.setContentSize = {
+            scrollViewController.scrollView.contentSize = $0
+        }
+        
         proxy.getContentInset = {
             EdgeInsets(scrollViewController.scrollView.contentInset)
         }
