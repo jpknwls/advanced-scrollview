@@ -18,6 +18,11 @@ public struct AdvancedScrollViewProxy {
         performScrollTo(rect, animated)
     }
 
+    public func setCanvasSize(_ size: CGRect) {
+        contentSize = size
+    }
+    
+    
     public var contentOffset: CGPoint {
         get {
             getContentOffset()
