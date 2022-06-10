@@ -18,8 +18,8 @@ public struct AdvancedScrollViewProxy {
         performScrollTo(rect, animated)
     }
 
-    public mutating func setCanvasSize(_ size: CGSize) {
-        contentSize = size
+    public func setCanvasSize(_ size: CGSize) {
+        setContentSize(size)
     }
     
     
